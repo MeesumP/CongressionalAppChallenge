@@ -12,4 +12,4 @@ def signup_page():
 
 @views.route('/results')
 def results_page():
-    return render_template('signup.html')
+    return render_template('results.html')
