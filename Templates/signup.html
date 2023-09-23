@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Search Options</h1>
+    </header>
+
+    <main>
+        <section class="search-section">
+            <h2>Filter by Shelter Type</h2>
+            <div class="search-options">
+                <form id="shelterForm" action="{% url 'submit' %}" method="post">
+                    <h3>Biological Sex:</h3>
+                    <div class="sex-options">
+                        <input type="radio" name="sex" id="male" value="male">
+                        <label for="male">Male</label>
+
+                        <input type="radio" name="sex" id="female" value="female">
+                        <label for="female">Female</label>
+
+                    </div>
+                    
+                    <h3>Are you bringing children with you?</h3>
+                    <div class="family-options">
+                        <input type="radio" id="Yes" name="children" value="YES">
+                        <label for="yes">Yes</label>
+
+                        <input type="radio" id="No" name="children" value="NO">
+                        <label for="no">No</label>
+                    </div>
+
+                    <h3>Do you or one of your dependents have a mental disability?</h3>
+                    <div class = "mental-health">
+                        <input type="radio" id="YeS" name="mental" value="YES">
+                        <label for="yes">Yes</label>
+
+                        <input type="radio" id="nO" name="mental" value="NO">
+                        <label for="no">No</label>
+                    </div>
+
+                    <h3>Do you or one of your dependents have a physical disability?</h3>
+                    <div class = "Physical">
+                        <input type="radio" id="yEs" name="physical" value="YES">
+                        <label for="yes">Yes</label>
+
+                        <input type="radio" id="no" name="physical" value="NO">
+                        <label for="no">No</label>
+                    </div>
+
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Homeless Shelter Finder</p>
+    </footer>
+</div>
+
+</body>
+</html>
