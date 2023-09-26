@@ -10,6 +10,7 @@ def home_page():
 def signup_page():
     if request.method == 'POST':
         biological_sex = request.form.get('sex')
+    print(biological_sex)
     #data ex: ([('sex', 'male'), ('children', 'NO'), ('mental', 'NO'), ('physical', 'NO')])
     return render_template('signup.html')
 
