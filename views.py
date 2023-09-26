@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template
+from flask import Blueprint, render_template, request
 
 views = Blueprint(__name__, 'views')
 
@@ -6,8 +6,9 @@ views = Blueprint(__name__, 'views')
 def home_page():
     return render_template('home.html') #can pass variables to template that render with proper way to call in html code
 
-@views.route('/signup')
+@views.route('/signup', methods=['GET', 'POST'])
 def signup_page():
+    data = request.form
     return render_template('signup.html')
 
 @views.route('/results')
