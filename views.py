@@ -8,7 +8,9 @@ def home_page():
 
 @views.route('/signup', methods=['GET', 'POST'])
 def signup_page():
-    data = request.form
+    if request.method == 'POST':
+        biological_sex = request.form.get('sex')
+    #data ex: ([('sex', 'male'), ('children', 'NO'), ('mental', 'NO'), ('physical', 'NO')])
     return render_template('signup.html')
 
 @views.route('/results')
