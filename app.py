@@ -4,9 +4,7 @@ from flask import Flask
 from views import views
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy_utils import database_exists, create_database
-
-db = SQLAlchemy()
-DB_NAME = "database.db"
+from models import db, DB_NAME
 
 def create_app():
     app = Flask(__name__)
