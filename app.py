@@ -1,9 +1,9 @@
+import path, os
+
 from flask import Flask
 from views import views
 from flask_sqlalchemy import SQLAlchemy
-
-from flask_login import UserMixin
-from sqlalchemy.sql import func
+from sqlalchemy_utils import database_exists, create_database
 
 db = SQLAlchemy()
 DB_NAME = "database.db"
@@ -15,15 +15,13 @@ def create_app():
 
     app.register_blueprint(views, url_prefix='/')
 
-    class User(db.Model, UserMixin):
-        id = db.Column(db.Integer, primary_key=True)
-        biological_sex = db.Column(db.String(3), unique=False)
-        has_children = db.Column(db.Boolean, unique=False, default=False)
-        physical_disability = db.Column(db.Boolean, unique=False, default=False)
-        mental_disability = db.Column(db.Boolean, unique=False, default=False)
+    from models import User
+
+    create_database(app)
 
     return app
 
-app = create_app()
-if __name__ == '__main__':
-    app.run(debug=True, port=8000)
+
+def create_database(app):
+    if not os.path.isfile('website/' + DB_NAME):
+        pass

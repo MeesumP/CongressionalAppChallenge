@@ -1,4 +1,5 @@
 from flask import Blueprint, render_template, request
+from models import User
 
 views = Blueprint(__name__, 'views')
 
@@ -12,22 +13,22 @@ def signup_page():
     has_children = request.form.get('children')
     mental_disability = request.form.get('mental')
     physical_disability = request.form.get('physical')
-    if has_children.lower() == 'YES':
+    if has_children == 'YES':
         has_children = True
     else:
         has_children = False
 
-    if mental_disability.lower() == 'YES':
+    if mental_disability == 'YES':
         mental_disability = True
     else:
         mental_disability = False
 
-    if physical_disability.lower() == 'YES':
+    if physical_disability == 'YES':
         physical_disability = True
     else:
         physical_disability = False
 
-  #  user = User(biological_sex, has_children, mental_disability, physical_disability)
+    user = User(biological_sex=biological_sex, has_children=has_children, mental_disability=mental_disability, physical_disability=physical_disability)
     #data ex: ([('sex', 'male'), ('children', 'NO'), ('mental', 'NO'), ('physical', 'NO')])
     return render_template('signup.html')
 
