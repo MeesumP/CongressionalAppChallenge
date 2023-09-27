@@ -4,7 +4,7 @@ views = Blueprint(__name__, 'views')
 
 @views.route('/')
 def home_page():
-    return render_template('home.html') #can pass variables to template that render with proper way to call in html code
+    return render_template('index.html') #can pass variables to template that render with proper way to call in html code
 
 @views.route('/signup')
 def signup_page():
