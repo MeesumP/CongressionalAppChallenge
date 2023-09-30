@@ -28,6 +28,6 @@ def signup_page():
     db.session.commit()
     return render_template('signup.html')
 
-@views.route('/results')
+@views.route('/results', methods=['GET', 'POST'])
 def results_page():
     return render_template('results.html', shelters=test_shelters)
