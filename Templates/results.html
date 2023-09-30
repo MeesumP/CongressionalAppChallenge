@@ -72,7 +72,35 @@
     
     <main>
         <div class="text-container">
-            <h3>Put Here</h3>
+            <table class="table table-hover table-dark">
+                <thead>
+                  <tr>
+                    <!-- Your Columns HERE -->
+                    <th scope="col">Name</th>
+                    <th scope="col">Agency</th>
+                    <th scope="col">Location</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Does the shelter have programs for families?</th>
+                    <th scope="col">Which sexes does the shelter support?</th>
+                    <th scope="col">Does the shelter support those with disabilities?</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Your rows inside the table HERE: -->
+                  {% for shelter in shelters %}
+                  <tr>
+                    <td>{{ shelter["Name"] }}</td>
+                    <td>{{ shelter["Agency"] }}</td>
+                    <td>{{ shelter["Location"] }}</td>
+                    <td>{{ shelter["Description"] }}</td>
+                    <td>{{ shelter["Family Support"] }}</td>
+                    <td>{{ shelter["Supports"] }}</td>
+                    <td>{{ shelter["Support for Disabilities/Illnesses"] }}</td>
+                    <td>
+                  </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
         </div>
     </main>
 </body>
