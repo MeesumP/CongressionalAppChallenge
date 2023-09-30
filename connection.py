@@ -377,3 +377,51 @@ shelters_data = [
         "Support for Disabilities/Illnesses": "No"
     }
 ]
+
+from models import User, Shelter
+
+possible_shelters = []
+
+def find_user():
+    user = User.query.order_by(User.id.desc()).first()
+    return user
+
+
+def connection_algorithm():
+    user = find_user()
+    sex = user.biological_sex
+    has_children = user.has_children
+    has_disability = user.has_disability
+    needs_family_support = False
+    needs_disability_support = False
+    if has_children:
+        needs_family_support = True
+    if has_disability:
+        needs_disability_support = True
+    for shelter in shelters_data:
+        can_add = 0
+        values = shelter.values()
+
+
+
+
+test_shelters = [
+    {
+        "Name": "Aletha R. Wright Center and Home for the Brave",
+        "Agency": "Volunteers of America Delaware Valley (VOADV)",
+        "Location": "271 Atlantic Ave, Camden, NJ 08104",
+        "Description": "Provides emergency shelter and supportive services to homeless men. It is specially designed to move each individual through 3 phases focusing on addressing basic needs, life skills, employment, and housing.",
+        "Family Support": "No",
+        "Supports": "Men",
+        "Support for Disabilities/Illnesses": "No"
+    },
+    {
+        "Name": "Anna M Sample Complex",
+        "Agency": "Volunteers of America Delaware Valley (VOADV)",
+        "Location": "408 Line St, Camden, NJ 08103",
+        "Description": "Operates a 24/7 supervised residence for homeless families and single adult females. Services available to residents include case management, crisis intervention, counseling, child-enrichment activities, and more.",
+        "Family Support": "Yes",
+        "Supports": "Women, Families",
+        "Support for Disabilities/Illnesses": "Mental Health"
+    }
+]
