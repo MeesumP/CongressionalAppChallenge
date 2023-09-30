@@ -1,6 +1,6 @@
 from flask import Blueprint, render_template, request
-from models import User
-from connection import test_shelters
+from models import User, db
+from connection import find_user, connection_algorithm, test_shelters
 
 views = Blueprint(__name__, 'views')
 
@@ -18,18 +18,14 @@ def signup_page():
     else:
         has_children = False
 
-    if mental_disability == 'YES':
-        mental_disability = True
-    else:
-        mental_disability = False
-
     if has_disability == 'YES':
         has_disability = True
     else:
         has_disability = False
 
     user = User(biological_sex=biological_sex, has_children=has_children, has_disability=has_disability)
-    #data ex: ([('sex', 'male'), ('children', 'NO'), ('mental', 'NO'), ('physical', 'NO')])
+    db.session.add(user)
+    db.session.commit()
     return render_template('signup.html')
 
 @views.route('/results')
