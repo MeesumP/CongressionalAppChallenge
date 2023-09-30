@@ -1,5 +1,6 @@
 from flask import Blueprint, render_template, request
 from models import User
+from connection import test_shelters
 
 views = Blueprint(__name__, 'views')
 
@@ -34,4 +35,4 @@ def signup_page():
 
 @views.route('/results')
 def results_page():
-    return render_template('results.html')
+    return render_template('results.html', shelters=test_shelters)

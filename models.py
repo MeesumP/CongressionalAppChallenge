@@ -1,13 +1,22 @@
-from flask_login import UserMixin
+
 from flask_sqlalchemy import SQLAlchemy
-from sqlalchemy.sql import func
 
 db = SQLAlchemy()
 DB_NAME = "database.db"
 
-class User(db.Model, UserMixin):
+class User(db.Model):
         id = db.Column(db.Integer, primary_key=True)
-        biological_sex = db.Column(db.String(3), unique=False)
+        biological_sex = db.Column(db.String(5), unique=False)
         has_children = db.Column(db.Boolean, unique=False, default=False)
         physical_disability = db.Column(db.Boolean, unique=False, default=False)
         mental_disability = db.Column(db.Boolean, unique=False, default=False)
+
+class Shelter(db.Model):
+        id = db.Column(db.Integer, primary_key=True)
+        name = db.Column(db.String(10000), unique=True)
+        agency = db.Column(db.String(1000), unique=True)
+        location = db.Column(db.String(1000), unique=True)
+        description = db.Column(db.String(10000000), unique=True)
+        supports_families = db.Column(db.Boolean, unique=False, default=False)
+        supports_gender = db.Column(db.String(25), unique=False, default="Both Sexes")
+        supports_disabilities = db.Column(db.Boolean, unique=False, default=False)
