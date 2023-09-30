@@ -12,8 +12,7 @@ def home_page():
 def signup_page():
     biological_sex = request.form.get('sex')
     has_children = request.form.get('children')
-    mental_disability = request.form.get('mental')
-    physical_disability = request.form.get('physical')
+    has_disability = request.form.get('disability')
     if has_children == 'YES':
         has_children = True
     else:
@@ -24,12 +23,12 @@ def signup_page():
     else:
         mental_disability = False
 
-    if physical_disability == 'YES':
-        physical_disability = True
+    if has_disability == 'YES':
+        has_disability = True
     else:
-        physical_disability = False
+        has_disability = False
 
-    user = User(biological_sex=biological_sex, has_children=has_children, mental_disability=mental_disability, physical_disability=physical_disability)
+    user = User(biological_sex=biological_sex, has_children=has_children, has_disability=has_disability)
     #data ex: ([('sex', 'male'), ('children', 'NO'), ('mental', 'NO'), ('physical', 'NO')])
     return render_template('signup.html')
 

@@ -8,8 +8,7 @@ class User(db.Model):
         id = db.Column(db.Integer, primary_key=True)
         biological_sex = db.Column(db.String(5), unique=False)
         has_children = db.Column(db.Boolean, unique=False, default=False)
-        physical_disability = db.Column(db.Boolean, unique=False, default=False)
-        mental_disability = db.Column(db.Boolean, unique=False, default=False)
+        has_disability = db.Column(db.Boolean, unique=False, default=False)
 
 class Shelter(db.Model):
         id = db.Column(db.Integer, primary_key=True)
