@@ -20,6 +20,7 @@ shelters_data = [
     {
         "Name": "Cooling Centers",
         "Agency": "NJ 211 Partnership",
+        "Location": "",
         "Description": "Provides shelter, food, and clothing during extreme temperatures for homeless or medically fragile individuals. Initiates Code Blue Alert during severe weather.",
         "Family Support": "No",
         "Supports": "Both Sexes",
@@ -132,15 +133,6 @@ shelters_data = [
         "Family Support": "Yes",
         "Supports": "Families",
         "Support for Disabilities/Illnesses": "No"
-    },
-    {
-        "Name": "Apostles' House (Newark, 16-18 Grant St Location)",
-        "Agency": "Apostles' House",
-        "Location": "16-18 Grant St, Newark, NJ 07104",
-        "Description": "Provides a 30 bed emergency shelter facility for women with children. Offers supportive services and a Continuum of Care program for families transitioning to permanent housing.",
-        "Family Support": "Yes",
-        "Supports": "Women, Families",
-        "Support for Disabilities/Illnesses": "Yes (Counseling)"
     },
     {
         "Name": "Apostles' House (Newark, 28-30 Grant St Location)",
@@ -378,17 +370,8 @@ shelters_data = [
     }
 ]
 
-from models import User, Shelter
-
-possible_shelters = []
-
-def find_user():
-    user = User.query.order_by(User.id.desc()).first()
-    return user
-
-
-def connection_algorithm():
-    user = find_user()
+def connection_algorithm(user):
+    possible_shelters = []
     sex = user.biological_sex
     has_children = user.has_children
     has_disability = user.has_disability
@@ -400,4 +383,32 @@ def connection_algorithm():
         needs_disability_support = True
     for shelter in shelters_data:
         can_add = 0
-        values = shelter.values()
+        info = list(shelter.values())
+        print(sex)
+        if sex == "Male" and "Men" in info[5]:
+            can_add+=1
+        if sex == "Male" and "Both Sexes" in info[5]:
+            can_add+=1
+        if sex == "Female" and "Women" in info[5]:
+            can_add+=1
+        if sex == "Female" and "Both Sexes" in info[5]:
+            can_add+=1
+        if sex == "Female" and "Families" in info[5]:
+            can_add+=1
+        print(f"gender stuff {can_add}")
+        if needs_family_support and "Yes" in info[4]:
+            can_add+=1
+        elif needs_family_support == False:
+            can_add+=1
+        print(f"family stuff {can_add}")
+        if needs_disability_support and "Yes" in info[-1]:
+            can_add+=1
+        elif needs_disability_support and "Mental Health" in info[-1]:
+            can_add+=1
+        elif needs_disability_support == False:
+            can_add+=1
+        print(f"disability stuff {can_add}")
+        if can_add == 3:
+            possible_shelters.append(shelter)
+        print(can_add)
+    return possible_shelters

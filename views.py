@@ -1,6 +1,6 @@
 from flask import Blueprint, render_template, request
 from models import User, db
-from connection import find_user, connection_algorithm, shelters_data
+from connection import connection_algorithm
 
 views = Blueprint(__name__, 'views')
 
@@ -30,4 +30,7 @@ def signup_page():
 
 @views.route('/results', methods=['GET', 'POST'])
 def results_page():
-    return render_template('results.html', shelters=shelters_data)
+    possible_shelters = connection_algorithm(User.query.order_by(User.id.desc()).first())
+    print(f"Possible shelters: {possible_shelters}")
+    print(f"Users: {User.query.all()}")
+    return render_template('results.html', shelters=possible_shelters)
