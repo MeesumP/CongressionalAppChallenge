@@ -446,3 +446,16 @@ img::-moz-selection {
 
     
 }
+.custom-logo {
+    width: 250px; /* Adjust the width as needed to make it smaller */
+    height: 250px; /* Automatically adjust the height to maintain aspect ratio */
+    margin-right: 10px; /* Add margin to provide spacing between the logo and text */
+  }
+  
+.custom-logo-container {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+}
+
+
