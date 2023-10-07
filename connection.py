@@ -372,6 +372,7 @@ shelters_data = [
 
 def connection_algorithm(user):
     possible_shelters = []
+    print(user)
     sex = user.biological_sex
     has_children = user.has_children
     has_disability = user.has_disability
@@ -384,7 +385,6 @@ def connection_algorithm(user):
     for shelter in shelters_data:
         can_add = 0
         info = list(shelter.values())
-        print(sex)
         if sex == "Male" and "Men" in info[5]:
             can_add+=1
         if sex == "Male" and "Both Sexes" in info[5]:
@@ -395,20 +395,16 @@ def connection_algorithm(user):
             can_add+=1
         if sex == "Female" and "Families" in info[5]:
             can_add+=1
-        print(f"gender stuff {can_add}")
         if needs_family_support and "Yes" in info[4]:
             can_add+=1
         elif needs_family_support == False:
             can_add+=1
-        print(f"family stuff {can_add}")
         if needs_disability_support and "Yes" in info[-1]:
             can_add+=1
         elif needs_disability_support and "Mental Health" in info[-1]:
             can_add+=1
         elif needs_disability_support == False:
             can_add+=1
-        print(f"disability stuff {can_add}")
         if can_add == 3:
             possible_shelters.append(shelter)
-        print(can_add)
     return possible_shelters

@@ -1,6 +1,6 @@
 from flask import Blueprint, render_template, request
 from models import User, db
-from connection import connection_algorithm
+from connection import connection_algorithm, shelters_data
 
 views = Blueprint(__name__, 'views')
 
@@ -10,26 +10,30 @@ def home_page():
 
 @views.route('/signup', methods=['GET', 'POST'])
 def signup_page():
-    biological_sex = request.form.get('sex')
-    has_children = request.form.get('children')
-    has_disability = request.form.get('disability')
-    if has_children == 'YES':
-        has_children = True
-    else:
-        has_children = False
+    if request.method == 'POST':
+        biological_sex = request.form.get('male')
+        has_children = request.form.get('children')
+        has_disability = request.form.get('disability')
+        if has_children == 'YES':
+            has_children = True
+        else:
+            has_children = False
 
-    if has_disability == 'YES':
-        has_disability = True
-    else:
-        has_disability = False
+        if has_disability == 'YES':
+            has_disability = True
+        else:
+            has_disability = False
+        print("IS IT WORKING")
 
-    user = User(biological_sex=biological_sex, has_children=has_children, has_disability=has_disability)
-    db.session.add(user)
-    db.session.commit()
+        user = User(biological_sex=biological_sex, has_children=has_children, has_disability=has_disability)
+        db.session.add(user)
+        db.session.commit()
     return render_template('signup.html')
 
 @views.route('/results', methods=['GET', 'POST'])
 def results_page():
+    #db.session.add(User(biological_sex="Female", has_children=True, has_disability=True))
+    #db.session.commit()
     possible_shelters = connection_algorithm(User.query.order_by(User.id.desc()).first())
     print(f"Possible shelters: {possible_shelters}")
     print(f"Users: {User.query.all()}")
