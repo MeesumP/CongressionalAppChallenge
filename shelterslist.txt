@@ -1,4 +1,4 @@
-shelters_data = [
+[
     {
         "Name": "Aletha R. Wright Center and Home for the Brave",
         "Agency": "Volunteers of America Delaware Valley (VOADV)",
@@ -20,6 +20,7 @@ shelters_data = [
     {
         "Name": "Cooling Centers",
         "Agency": "NJ 211 Partnership",
+        "Location": "",
         "Description": "Provides shelter, food, and clothing during extreme temperatures for homeless or medically fragile individuals. Initiates Code Blue Alert during severe weather.",
         "Family Support": "No",
         "Supports": "Both Sexes",
@@ -132,15 +133,6 @@ shelters_data = [
         "Family Support": "Yes",
         "Supports": "Families",
         "Support for Disabilities/Illnesses": "No"
-    },
-    {
-        "Name": "Apostles' House (Newark, 16-18 Grant St Location)",
-        "Agency": "Apostles' House",
-        "Location": "16-18 Grant St, Newark, NJ 07104",
-        "Description": "Provides a 30 bed emergency shelter facility for women with children. Offers supportive services and a Continuum of Care program for families transitioning to permanent housing.",
-        "Family Support": "Yes",
-        "Supports": "Women, Families",
-        "Support for Disabilities/Illnesses": "Yes (Counseling)"
     },
     {
         "Name": "Apostles' House (Newark, 28-30 Grant St Location)",
