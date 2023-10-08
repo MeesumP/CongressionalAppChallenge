@@ -6,8 +6,6 @@ from flask_wtf import FlaskForm
 from wtforms import RadioField, SubmitField
 from wtforms.validators import InputRequired
 
-from werkzeug.datastructures import ImmutableMultiDict 
-
 views = Blueprint(__name__, 'views')
 
 @views.route('/')

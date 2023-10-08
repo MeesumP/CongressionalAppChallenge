@@ -1,5 +1,3 @@
-from os import path
-
 from flask import Flask
 from views import views
 from models import db, DB_NAME

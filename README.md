@@ -1,7 +1,15 @@
-# CongressionalAppChallenge
+Congressional App Challenge: Shelter Search
 
-# Project connects homeless people with shelters in area that provide services/oppurtunites for people that fit description
+Setup and Installation (Windows):
 
-# Requires flask, flask_login, flask_sqlalchemy
+1. Make sure you have the latest version of python installed
+2. Clone the repository
+3. Run the following command in the console: pip install -r requirements.txt
 
-# testing branch swapping in order to figure out developer gitflow
+Running the Web App (Windows):
+
+1. Run the following command in the terminal: python __init__.py
+
+Viewing the App (All Platforms):
+
+1. Go to the following link on any web browser: http://127.0.0.1:5000
