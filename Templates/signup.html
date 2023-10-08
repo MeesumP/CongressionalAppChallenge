@@ -1,12 +1,11 @@
-{% extends "base.html" %} 
-{% block title %}Shelter Search{% endblock %} 
-{% block content %}
+{% extends "base.html" %} {% block title %}Shelter Search{% endblock %} {% block
+content %}
 <style>
   /* Add custom styles here */
   body {
     padding-top: 120px; /* Adjusted to account for the fixed navbar */
   }
-/*
+  /*
   .navbar-brand {
     padding: 0;
     margin: 0;
@@ -70,10 +69,6 @@
   .list_items {
     list-style-type: none;
   }
-
-  .submit_button {
-    color: #008080;
-  }
 </style>
 
 <div class="container">
@@ -92,7 +87,7 @@
           <p>{{ form.has_children(size=30) }}</p>
           <h3>{{ form.has_disability.label }}</h3>
           <p>{{ form.has_disability(size=30) }}</p>
-          <p class="submit_button">{{ form.submit() }}</p>
+          <p class="submit_button btn btn-primary">{{ form.submit() }}</p>
         </form>
       </div>
     </section>
