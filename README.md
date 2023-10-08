@@ -13,7 +13,7 @@ Link to the actual website running this project:
 ## Setup and Installation (Windows):
 
 1. Make sure you have the latest version of python installed
-2. Clone the repository
+2. Clone the repository with the command: ```git clone https://github.com/MeesumP/CongressionalAppChallenge.git```
 3. Run the following command in the console: ```pip install -r requirements.txt```
 
 ## Running the Web App (Windows):
