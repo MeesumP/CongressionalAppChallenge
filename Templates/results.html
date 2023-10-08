@@ -1,108 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Bergen County Shelter Finder</title>
 
-    <link href="/static/notcss/bootstrap.min.css" rel="stylesheet">
-    <link href="/static/notcss/custom.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link
+      rel="shortcut icon"
+      href="static/notcss/images/favicon.ico"
+      type="image/x-icon"
+    />
+
+    <link href="/static/notcss/bootstrap.min.css" rel="stylesheet" />
+    <link href="/static/notcss/custom.css" rel="stylesheet" />
+    <link
+      href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
+      rel="stylesheet"
+      type="text/css"
+    />
     <style>
-        body {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
 
-        #siteNav {
-            width: 100%;
-            z-index: 1000;
-        }
-        main {
-            margin-top: 70px;
-        }
-        
-        .text-container {
-            max-height: auto; 
-            overflow-y: auto;
-            text-align: center;
-            width: 1250px;
-            word-wrap: break-word;
-        }
+      #siteNav {
+        width: 100%;
+        z-index: 1000;
+      }
+      main {
+        margin-top: 70px;
+      }
+
+      .text-container {
+        max-height: auto;
+        overflow-y: auto;
+        text-align: center;
+        width: 1250px;
+        word-wrap: break-word;
+      }
     </style>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <nav id="siteNav" class="navbar navbar-default" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="/">
-                    LOGO
-                </a>
-            </div>
-
-            <div class="collapse navbar-collapse" id="navbar">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="/">Home</a>
-                    </li>
-                    <li>
-                        <a href="/signup">Services</a>
-                    </li>
-                    <li class="dropdown">
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
-                </ul>
-            </div>
+      <div class="container">
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target="#navbar"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/"> LOGO </a>
         </div>
+
+        <div class="collapse navbar-collapse" id="navbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <a href="/signup">Services</a>
+            </li>
+            <li class="dropdown"></li>
+            <li>
+              <a href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
-    
-    <main>
-        <div class="text-container">
-            <table class="table table-hover table-dark">
-                <thead>
-                  <tr>
-                    <th scope="col">Name</th>
-                    <th scope="col">Agency</th>
-                    <th scope="col">Location</th>
-                    <th scope="col">Description</th>
-                    <th scope="col">Does the shelter have programs for families?</th>
-                    <th scope="col">Which sexes does the shelter support?</th>
-                    <th scope="col">Does the shelter support those with disabilities?</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {% for shelter in shelters %}
-                  <tr>
-                    <td>{{ shelter["Name"] }}</td>
-                    <td>{{ shelter["Agency"] }}</td>
-                    <td>{{ shelter["Location"] }}</td>
-                    <td>{{ shelter["Description"] }}</td>
-                    <td>{{ shelter["Family Support"] }}</td>
-                    <td>{{ shelter["Supports"] }}</td>
-                    <td>{{ shelter["Support for Disabilities/Illnesses"] }}</td>
-                    <td>
-                  </tr>
-                  {% endfor %}
-                </tbody>
-              </table>
-        </div>
-    </main>
-</body>
 
+    <main>
+      <div class="text-container">
+        <table class="table table-hover table-dark">
+          <thead>
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Agency</th>
+              <th scope="col">Location</th>
+              <th scope="col">Description</th>
+              <th scope="col">Does the shelter have programs for families?</th>
+              <th scope="col">Which sexes does the shelter support?</th>
+              <th scope="col">
+                Does the shelter support those with disabilities?
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for shelter in shelters %}
+            <tr>
+              <td>{{ shelter["Name"] }}</td>
+              <td>{{ shelter["Agency"] }}</td>
+              <td>{{ shelter["Location"] }}</td>
+              <td>{{ shelter["Description"] }}</td>
+              <td>{{ shelter["Family Support"] }}</td>
+              <td>{{ shelter["Supports"] }}</td>
+              <td>{{ shelter["Support for Disabilities/Illnesses"] }}</td>
+              <td></td>
+            </tr>
+
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </body>
 </html>

@@ -372,7 +372,6 @@ shelters_data = [
 
 def connection_algorithm(user):
     possible_shelters = []
-    print(user)
     sex = user.biological_sex
     has_children = user.has_children
     has_disability = user.has_disability
