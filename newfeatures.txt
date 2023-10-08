@@ -18,4 +18,4 @@ Backend:
 1. Fix connection algorithm in seperate env
 2. Connect with google API on location/distance
 3. Clean up code & references
-4. Update README with description and link to GitHub, code for cloning, etc.
+4. Update README with description and link to GitHub, code for cloning, etc. - DONE
