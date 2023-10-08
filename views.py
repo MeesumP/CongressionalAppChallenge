@@ -1,6 +1,6 @@
 from flask import Blueprint, render_template, request
 from models import User, db
-from connection import connection_algorithm, shelters_data
+from connection import connection_algorithm
 
 from flask_wtf import FlaskForm
 from wtforms import RadioField, SubmitField
@@ -10,7 +10,7 @@ views = Blueprint(__name__, 'views')
 
 @views.route('/')
 def home_page():
-    return render_template('index.html') #can pass variables to template that render with proper way to call in html code
+    return render_template('index.html')
 
 @views.route('/signup', methods=['GET', 'POST'])
 def signup_page():
