@@ -12,6 +12,7 @@ Frontend:
 7. Make table render properly (margins, text) 
 8. Add results column for distance from, works with backend on Google API
 9. Clean up code & references (mostly on 'base.html' doc)
+10. Contact Sign Up Form Page
 
 Backend:
 
@@ -19,3 +20,4 @@ Backend:
 2. Connect with google API on location/distance
 3. Clean up code & references
 4. Update README with description and link to GitHub, code for cloning, etc. - DONE
+5. Write Sign Up Form Page
