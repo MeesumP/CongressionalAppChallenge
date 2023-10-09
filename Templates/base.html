@@ -24,7 +24,7 @@
     <!-- Navigation -->
     <nav
       id="siteNav navbar-scroll-change"
-      class="navbar navbar-default navbar-fixed-top"
+      class="autohide navbar navbar-expand-lg navbar-dark bg-primary navbar-fixed-top"
       role="navigation"
     >
       <div class="container fix-margin">
@@ -57,7 +57,7 @@
               <a href="/">Home</a>
             </li>
             <li>
-              <a href="/signup">Services</a>
+              <a href="/signup">Search</a>
             </li>
             <li class="dropdown"></li>
             <li>
@@ -79,21 +79,22 @@
               <a href="/">Home</a>
             </li>
             <li>
-              <a href="/signup">Services</a>
+              <a href="/signup">Search</a>
             </li>
             <li class="dropdown"></li>
             <li class="active">
               <a href="/contact">Contact</a>
             </li>
-            {% elif not request.path == '/' and not request.path == '/signup' and not request.path == '/contact' %}
+            {% elif not request.path == '/' and not request.path == '/signup'
+            and not request.path == '/contact' %}
             <li>
               <a href="/">Home</a>
             </li>
             <li>
-              <a href="/signup">Services</a>
+              <a href="/signup">Search</a>
             </li>
             <li class="dropdown"></li>
-            <li >
+            <li>
               <a href="/contact">Contact</a>
             </li>
             {% endif %}

@@ -3,7 +3,7 @@ Outline:
 Frontend:
 
 1. Make navbar links with proper margin - DONE
-2. Make navbar dissappear on scroll
+2. Make navbar dissappear on scroll - GENERAL FEATURE DONE
 3. Change picture on landing page, match with color scheme
     3a. make sure text on first image contrasts enough
 4. Change pictures to match
