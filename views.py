@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, request
+from flask import Blueprint, render_template, request, redirect
 from models import User, db
 from connection import connection_algorithm
 
@@ -41,9 +41,17 @@ def signup_page():
         user = User(biological_sex=biological_sex, has_children=has_children, has_disability=has_disability)
         db.session.add(user)
         db.session.commit()
+
+        return redirect('/results')
+
     return render_template('signup.html', form=form)
 
 @views.route('/results', methods=['GET', 'POST'])
 def results_page():
-    possible_shelters = connection_algorithm(User.query.order_by(User.id.desc()).first())
+    mostRecentUser = User.query.order_by(User.id.desc()).first()
+    possible_shelters = connection_algorithm(mostRecentUser)
     return render_template('results.html', shelters=possible_shelters)
+
+@views.route('/contact', methods=['POST', 'GET'])
+def contact_page():
+    return render_template('contact.html')
