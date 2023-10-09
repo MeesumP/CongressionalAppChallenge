@@ -50,6 +50,7 @@ def signup_page():
 def results_page():
     mostRecentUser = User.query.order_by(User.id.desc()).first()
     possible_shelters = connection_algorithm(mostRecentUser)
+    print(f"biological sex: {mostRecentUser.biological_sex}, has children: {mostRecentUser.has_children}, has disability: {mostRecentUser.has_disability}")
     return render_template('results.html', shelters=possible_shelters)
 
 @views.route('/contact', methods=['POST', 'GET'])
