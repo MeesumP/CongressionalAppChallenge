@@ -18,3 +18,8 @@ class Shelter(db.Model):
         supports_families = db.Column(db.Boolean, unique=False, default=False)
         supports_gender = db.Column(db.String(25), unique=False, default="Both Sexes")
         supports_disabilities = db.Column(db.Boolean, unique=False, default=False)
+
+class Ticket(db.Model):
+        id = db.Column(db.Integer, primary_key=True)
+        email = db.Column(db.String(1000), unique=False)
+        info = db.Column(db.String(10000000000000), unique=True)

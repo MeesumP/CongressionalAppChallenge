@@ -10,7 +10,7 @@ def create_app():
 
     app.register_blueprint(views, url_prefix='/')
 
-    from models import User, Shelter
+    from models import User, Shelter, Ticket
 
     with app.app_context():
         db.create_all()

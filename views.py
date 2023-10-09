@@ -1,9 +1,9 @@
 from flask import Blueprint, render_template, request, redirect
-from models import User, db
+from models import User, db, Ticket
 from connection import connection_algorithm
 
 from flask_wtf import FlaskForm
-from wtforms import RadioField, SubmitField
+from wtforms import RadioField, SubmitField, StringField, TextAreaField
 from wtforms.validators import InputRequired
 
 views = Blueprint(__name__, 'views')
@@ -55,4 +55,27 @@ def results_page():
 
 @views.route('/contact', methods=['POST', 'GET'])
 def contact_page():
-    return render_template('contact.html')
+    class ContactForm(FlaskForm):
+        email = StringField(u'Email:', render_kw={'class':"textbox-format"})
+        info = TextAreaField(u'Please write your question below:', render_kw={'class':"textbox-format"})
+        submit = SubmitField("Submit", render_kw={'class': 'submit_button'})
+
+    form = ContactForm()
+    print(form.info)
+
+    if form.is_submitted():
+        result = request.form
+
+        email = result.get('email')
+        info = result.get('info')
+
+        ticket = Ticket(email=email, info=info)
+        db.session.add(ticket)
+        db.session.commit()
+
+    return render_template('contact.html', form=form)
+
+@views.route('/all-shelters')
+def allShelters_page():
+    shelters = []
+    return render_template('all_shelters.html', shelters=shelters)
