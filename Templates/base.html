@@ -85,7 +85,17 @@
             <li class="active">
               <a href="/contact">Contact</a>
             </li>
-
+            {% elif not request.path == '/' and not request.path == '/signup' and not request.path == '/contact' %}
+            <li>
+              <a href="/">Home</a>
+            </li>
+            <li>
+              <a href="/signup">Services</a>
+            </li>
+            <li class="dropdown"></li>
+            <li >
+              <a href="/contact">Contact</a>
+            </li>
             {% endif %}
           </ul>
         </div>
@@ -97,7 +107,7 @@
     {% block content %} {% endblock %}
 
     <!-- Footer and Contact Information -->
-    <footer class="page-footer">
+    <footer class="footer page-footer">
       <!-- Contact Us -->
       <div class="contact">
         <div class="container">
