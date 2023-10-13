@@ -67,41 +67,6 @@
         <!-- Navbar links -->
         <div class="collapse navbar-collapse" id="navbar">
           <ul class="nav navbar-nav navbar-right">
-            {% if request.path == '/' %}
-            <li class="active">
-              <a href="/">Home</a>
-            </li>
-            <li>
-              <a href="/signup">Search</a>
-            </li>
-            <li class="dropdown"></li>
-            <li>
-              <a href="/contact">Contact</a>
-            </li>
-            {% endif %} {% if request.path == '/signup' %}
-            <li>
-              <a href="/">Home</a>
-            </li>
-            <li class="active">
-              <a href="/signup">Search</a>
-            </li>
-            <li class="dropdown"></li>
-            <li>
-              <a href="/contact">Contact</a>
-            </li>
-            {% endif %} {% if request.path == '/contact' %}
-            <li>
-              <a href="/">Home</a>
-            </li>
-            <li>
-              <a href="/signup">Search</a>
-            </li>
-            <li class="dropdown"></li>
-            <li class="active">
-              <a href="/contact">Contact</a>
-            </li>
-            {% elif not request.path == '/' and not request.path == '/signup'
-            and not request.path == '/contact' %}
             <li>
               <a href="/">Home</a>
             </li>
@@ -110,9 +75,11 @@
             </li>
             <li class="dropdown"></li>
             <li>
+              <a href="/all-shelters">List of All Shelters</a>
+            </li>
+            <li>
               <a href="/contact">Contact</a>
             </li>
-            {% endif %}
           </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -140,6 +107,9 @@
             <span class="glyphicon glyphicon-envelope"> </span><br />
             <a href="mailto: meesump819@gmail.com">meesump819@gmail.com</a>
           </p>
+          <br />
+          <br />
+          <a href="/admin">Admin Page</a>
         </div>
       </div>
 

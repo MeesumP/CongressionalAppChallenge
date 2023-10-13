@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, request, redirect
+from flask import Blueprint, render_template, request, redirect, flash
 from models import User, db, Ticket
 from connection import connection_algorithm
 
@@ -7,6 +7,19 @@ from wtforms import RadioField, SubmitField, StringField, TextAreaField, Passwor
 from wtforms.validators import InputRequired
 
 views = Blueprint(__name__, 'views')
+
+global admins
+
+admins = [
+        {
+            "Username": "MAP",
+            "Password": "adminpassword123"
+        },
+        {
+           "Username": "CSP",
+            "Password": "anotheradminpassword123"
+        }
+    ]
 
 @views.route('/')
 def home_page():
@@ -61,7 +74,6 @@ def contact_page():
         submit = SubmitField("Submit", render_kw={'class': 'submit_button'})
 
     form = ContactForm()
-    print(form.info)
 
     if form.is_submitted():
         result = request.form
@@ -86,7 +98,28 @@ def allShelters_page():
 def thank_youpage():
     return render_template('aftercontactthank.html')
 
-@views.route('/admin')
+@views.route('/admin', methods=["POST", "GET"])
+def admin_pass_page():
+    class LogInForm(FlaskForm):
+        username = StringField(u'Username:', render_kw={'class':"textbox-format"})
+        password = PasswordField(u'Password:', render_kw={'class':"textbox-format"})
+        submit = SubmitField("Submit", render_kw={'class': 'submit_button'})
+    form = LogInForm()
+
+    if form.is_submitted():
+        result = request.form
+
+        username = result.get('username')
+        password = result.get('password')
+
+        for admin in admins:
+            if admin["Username"] == username and admin["Password"] == password:
+                return redirect('/admin-*(Yb4tcno8yc9P#*T85thONDFUDDHS84)')
+            else:
+                flash('Incorrect username or password', category="error")
+    return render_template('admin-pass.html', form=form)
+
+@views.route('/admin-*(Yb4tcno8yc9P#*T85thONDFUDDHS84)', methods=["GET", "POST"])
 def admin_page():
     contact_tickets = Ticket.query.all()
     return render_template('admin.html', tickets=contact_tickets)

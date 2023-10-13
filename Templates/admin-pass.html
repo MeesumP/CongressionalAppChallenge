@@ -65,18 +65,17 @@
 
 <div class="container">
     <header2>
-        <h1>Contact Form</h1>
+        <h1>Log In</h1>
     </header2>
 
     <main>
         <section class="search-section">
-            <h2>Please Enter Your Information</h2>
             <div class="search-options">
-                <form id="shelterForm" action="" method="POST">
-                    <h3>{{ form.email.label }}</h3>
-                    <p>{{ form.email(size=30) }}</p>
-                    <h3>{{ form.info.label }}</h3>
-                    <p>{{ form.info(size=30) }}</p>
+                <form id="shelterForm" action="/" method="POST">
+                    <h3>{{ form.username.label }}</h3>
+                    <p>{{ form.username(size=30) }}</p>
+                    <h3>{{ form.password.label }}</h3>
+                    <p>{{ form.password(size=30) }}</p>
                     <br>
                     <p class="submit_button btn btn-primary">{{ form.submit() }}</p>
                 </form>
