@@ -3,7 +3,7 @@ from models import User, db, Ticket
 from connection import connection_algorithm
 
 from flask_wtf import FlaskForm
-from wtforms import RadioField, SubmitField, StringField, TextAreaField
+from wtforms import RadioField, SubmitField, StringField, TextAreaField, PasswordField
 from wtforms.validators import InputRequired
 
 views = Blueprint(__name__, 'views')
@@ -73,9 +73,20 @@ def contact_page():
         db.session.add(ticket)
         db.session.commit()
 
+        return redirect('/thank-you')
+
     return render_template('contact.html', form=form)
 
 @views.route('/all-shelters')
 def allShelters_page():
     shelters = []
     return render_template('all_shelters.html', shelters=shelters)
+
+@views.route('/thank-you')
+def thank_youpage():
+    return render_template('aftercontactthank.html')
+
+@views.route('/admin')
+def admin_page():
+    contact_tickets = Ticket.query.all()
+    return render_template('admin.html', tickets=contact_tickets)

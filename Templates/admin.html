@@ -1,0 +1,58 @@
+{% extends 'base.html' %} {% block title %}Admin Page{% endblock %} {% block
+content %}
+<style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+  
+    #siteNav {
+      width: 100%;
+      z-index: 1000;
+    }
+  
+    main {
+      margin-top: 70px;
+    }
+  
+    .text-container {
+      max-height: auto;
+      overflow-y: auto;
+      text-align: center;
+      width: 1250px;
+      word-wrap: break-word;
+    }
+  
+    .table-container {
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+  </style>
+  
+  <main>
+    <div class="table-container">
+      <table class="table table-dark">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Email</th>
+            <th scope="col">Info</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for ticket in tickets %}
+          <tr>
+            <td>{{ ticket["id"] }}</td>
+            <td>{{ ticket["email"] }}</td>
+            <td>{{ ticket["info"] }}</td>
+          </tr>
+  
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </main>
+{% endblock %}
