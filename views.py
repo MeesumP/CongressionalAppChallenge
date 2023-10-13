@@ -98,7 +98,7 @@ def allShelters_page():
 def thank_youpage():
     return render_template('aftercontactthank.html')
 
-@views.route('/admin', methods=["POST", "GET"])
+@views.route('/admin', methods=['GET', 'POST'])
 def admin_pass_page():
     class LogInForm(FlaskForm):
         username = StringField(u'Username:', render_kw={'class':"textbox-format"})
@@ -114,12 +114,13 @@ def admin_pass_page():
 
         for admin in admins:
             if admin["Username"] == username and admin["Password"] == password:
-                return redirect('/admin-*(Yb4tcno8yc9P#*T85thONDFUDDHS84)')
+                return redirect('/admin-jksgiosjio&*(jksnbvgkohishg)')
             else:
-                flash('Incorrect username or password', category="error")
+                return redirect('/')
+                #flash('Incorrect username or password', category="error")
     return render_template('admin-pass.html', form=form)
 
-@views.route('/admin-*(Yb4tcno8yc9P#*T85thONDFUDDHS84)', methods=["GET", "POST"])
+@views.route('/admin-jksgiosjio&*(jksnbvgkohishg)', methods=['GET', 'POST'])
 def admin_page():
     contact_tickets = Ticket.query.all()
     return render_template('admin.html', tickets=contact_tickets)
