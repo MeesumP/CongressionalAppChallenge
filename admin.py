@@ -15,7 +15,7 @@ admins = [
         },
         {
            "Username": "CSP",
-            "Password": "anotheradminpassword123"
+            "Password": "calebisthebestcoderintheworld"
         }
     ]
 
