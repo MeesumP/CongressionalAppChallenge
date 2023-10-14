@@ -2,22 +2,14 @@ Outline:
 
 Frontend:
 
-1. Make navbar links with proper margin - DONE
-2. Make navbar dissappear on scroll - GENERAL FEATURE DONE
 3. Change picture on landing page, match with color scheme
     3a. make sure text on first image contrasts enough
 4. Change pictures to match
 5. Make buttons actualy link to something
-6. Change 'feature' to 'About Us', etc. - DONE
-7. Make table render properly (margins, text) 
 8. Add results column for distance from, works with backend on Google API
 9. Clean up code & references (mostly on 'base.html' doc)
-10. Contact Sign Up Form Page
 
 Backend:
 
 1. Fix connection algorithm in seperate env
 2. Connect with google API on location/distance
-3. Clean up code & references
-4. Update README with description and link to GitHub, code for cloning, etc. - DONE
-5. Write Sign Up Form Page

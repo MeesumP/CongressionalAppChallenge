@@ -15,7 +15,7 @@ shelters_data = [
         "Description": "Operates a 24/7 supervised residence for homeless families and single adult females. Services available to residents include case management, crisis intervention, counseling, child-enrichment activities, and more.",
         "Family Support": "Yes",
         "Supports": "Women, Families",
-        "Support for Disabilities/Illnesses": "Mental Health"
+        "Support for Disabilities/Illnesses": " Yes (Mental Health)"
     },
     {
         "Name": "Cooling Centers",

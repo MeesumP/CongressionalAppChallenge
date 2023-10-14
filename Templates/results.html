@@ -44,6 +44,7 @@ content %}
           <th scope="col">Has programs for families?</th>
           <th scope="col">Has programs for:</th>
           <th scope="col">Supports those with disabilities?</th>
+          <th scope="col">Distance:</th>
         </tr>
       </thead>
       <tbody>
@@ -56,6 +57,7 @@ content %}
           <td>{{ shelter["Family Support"] }}</td>
           <td>{{ shelter["Supports"] }}</td>
           <td>{{ shelter["Support for Disabilities/Illnesses"] }}</td>
+          <td>{{ shelter["Distance"] }} miles</td>
         </tr>
 
         {% endfor %}

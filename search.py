@@ -46,10 +46,16 @@ def signup_page():
 def results_page():
     mostRecentUser = User.query.order_by(User.id.desc()).first()
     possible_shelters = connection_algorithm(mostRecentUser)
-    print(f"biological sex: {mostRecentUser.biological_sex}, has children: {mostRecentUser.has_children}, has disability: {mostRecentUser.has_disability}")
+    possible_shelters = add_distance(possible_shelters)
     return render_template('results.html', shelters=possible_shelters)
 
 @search.route('/all-shelters')
 def allShelters_page():
     shelters = shelters_data
     return render_template('results.html', shelters=shelters)
+
+def add_distance(shelters):
+    for shelter in shelters:
+        location = shelter["Location"]
+        shelter['Distance'] = 2
+    return shelters
