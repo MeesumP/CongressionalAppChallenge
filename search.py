@@ -52,4 +52,4 @@ def results_page():
 @search.route('/all-shelters')
 def allShelters_page():
     shelters = shelters_data
-    return render_template('all_shelters.html', shelters=shelters)
+    return render_template('results.html', shelters=shelters)
