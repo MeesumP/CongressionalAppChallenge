@@ -22,4 +22,4 @@ class Shelter(db.Model):
 class Ticket(db.Model):
         id = db.Column(db.Integer, primary_key=True)
         email = db.Column(db.String(1000), unique=False)
-        info = db.Column(db.String(10000000000000), unique=True)
+        info = db.Column(db.String(10000000000000), unique=False)

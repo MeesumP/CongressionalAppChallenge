@@ -1,124 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{% block title %}Home{% endblock %}</title>
-    <link
-      rel="shortcut icon"
-      href="static/images/favicon.png"
-      type="image/x-icon"
-    />
 
-    <link href="/static/bootstrap.min.css" rel="stylesheet" />
-    <link href="/static/custom.css" rel="stylesheet" />
-    <link
-      href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
-      rel="stylesheet"
-      type="text/css"
-    />
-  </head>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{% block title %}Home{% endblock %}</title>
+  <link rel="shortcut icon" href="static/images/favicon.png" type="image/x-icon" />
 
-  <style>
+  <link href="/static/bootstrap.min.css" rel="stylesheet" />
+  <link href="/static/custom.css" rel="stylesheet" />
+  <link
+    href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
+    rel="stylesheet" type="text/css" />
+</head>
+
+<style>
+  .fix-margin {
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-right: 0px;
+    margin-left: 0%;
+  }
+
+  @media (min-width: 1200px) {
     .fix-margin {
-      padding-right: 0px;
-      padding-left: 0px;
-      margin-right: 0px;
-      margin-left: 0%;
+      width: 99%;
     }
+  }
+</style>
 
-    @media (min-width: 1200px) {
-      .fix-margin {
-        width: 99%;
-      }
-    }
-  </style>
-
-  <body>
-    <!-- Navigation -->
-    <nav
-      id="siteNav navbar-scroll-change"
-      class="navbar navbar-expand-lg navbar-dark bg-primary navbar-fixed-top"
-      role="navigation"
-    >
-      <div class="fix-margin">
-        <!-- Logo and responsive toggle -->
-        <div class="navbar-header">
-          <button
-            type="button"
-            class="navbar-toggle"
-            data-toggle="collapse"
-            data-target="#navbar"
-          >
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand custom-logo-container" href="/">
-            <img
-              src="static/images/Shelter Search Logo.png"
-              alt="Logo"
-              class="custom-logo"
-            />
-          </a>
-        </div>
-        <!-- Navbar links -->
-        <div class="collapse navbar-collapse" id="navbar">
-          <ul class="nav navbar-nav navbar-right">
-            <li>
-              <a href="/">Home</a>
-            </li>
-            <li>
-              <a href="/signup">Search</a>
-            </li>
-            <li class="dropdown"></li>
-            <li>
-              <a href="/all-shelters">List of All Shelters</a>
-            </li>
-            <li>
-              <a href="/contact">Contact</a>
-            </li>
-          </ul>
-        </div>
-        <!-- /.navbar-collapse -->
+<body>
+  <!-- Navigation -->
+  <nav id="siteNav navbar-scroll-change" class="navbar navbar-expand-lg navbar-dark bg-primary navbar-fixed-top"
+    role="navigation">
+    <div class="fix-margin">
+      <!-- Logo and responsive toggle -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand custom-logo-container" href="/">
+          <img src="static/images/Shelter Search Logo.png" alt="Logo" class="custom-logo" />
+        </a>
       </div>
-      <!-- /.container -->
-    </nav>
-
-    {% block content %} {% endblock %}
-
-    <!-- Footer and Contact Information -->
-    <footer class="footer page-footer fixed-bottom">
-      <!-- Contact Us -->
-      <div class="contact">
-        <div class="container">
-          <h2 class="section-heading">
-            <a href="/contact"> Contact Us </a>
-          </h2>
-          <p>
-            <span class="glyphicon glyphicon-envelope"></span><br />
-            <a href="mailto: calebsparksjh@gmail.com"
-              >calebsparksjh@gmail.com</a
-            >
-          </p>
-          <p>
-            <span class="glyphicon glyphicon-envelope"> </span><br />
-            <a href="mailto: meesump819@gmail.com">meesump819@gmail.com</a>
-          </p>
-          <br />
-          <br />
-          <a href="/admin">Admin Page</a>
-        </div>
+      <!-- Navbar links -->
+      <div class="collapse navbar-collapse" id="navbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/search">Search</a>
+          </li>
+          <li class="dropdown"></li>
+          <li>
+            <a href="/search/all-shelters">List of All Shelters</a>
+          </li>
+          <li>
+            <a href="/contact">Contact</a>
+          </li>
+        </ul>
       </div>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+  </nav>
 
-      <!-- Copyright etc -->
-      <div class="small-print">
-        <div class="container">
-          <p>Copyright &copy; Shelter Search 2023</p>
-        </div>
+  {% block content %} {% endblock %}
+
+  <!-- Footer and Contact Information -->
+  <footer class="footer page-footer fixed-bottom">
+    <!-- Contact Us -->
+    <div class="contact">
+      <div class="container">
+        <h2 class="section-heading">
+          <a href="/contact"> Contact Us </a>
+        </h2>
+        <p>
+          <span class="glyphicon glyphicon-envelope"></span><br />
+          <a href="mailto: calebsparksjh@gmail.com">calebsparksjh@gmail.com</a>
+        </p>
+        <p>
+          <span class="glyphicon glyphicon-envelope"> </span><br />
+          <a href="mailto: meesump819@gmail.com">meesump819@gmail.com</a>
+        </p>
+        <br />
+        <br />
+        <a href="/admin">Admin Page</a>
       </div>
-    </footer>
-  </body>
+    </div>
+
+    <!-- Copyright etc -->
+    <div class="small-print">
+      <div class="container">
+        <p>Copyright &copy; Shelter Search 2023</p>
+      </div>
+    </div>
+  </footer>
+</body>
+
 </html>
