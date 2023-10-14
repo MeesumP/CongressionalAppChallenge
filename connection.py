@@ -375,35 +375,28 @@ def connection_algorithm(user):
     sex = user.biological_sex
     has_children = user.has_children
     has_disability = user.has_disability
-    needs_family_support = False
-    needs_disability_support = False
-    if has_children:
-        needs_family_support = True
-    if has_disability:
-        needs_disability_support = True
     for shelter in shelters_data:
         can_add = 0
-        info = list(shelter.values())
-        if sex == "Male" and "Men" in info[5]:
-            can_add+=1
-        if sex == "Male" and "Both Sexes" in info[5]:
-            can_add+=1
-        if sex == "Female" and "Women" in info[5]:
-            can_add+=1
-        if sex == "Female" and "Both Sexes" in info[5]:
-            can_add+=1
-        if sex == "Female" and "Families" in info[5]:
-            can_add+=1
-        if needs_family_support and "Yes" in info[4]:
-            can_add+=1
-        elif needs_family_support == False:
-            can_add+=1
-        if needs_disability_support and "Yes" in info[-1]:
-            can_add+=1
-        elif needs_disability_support and "Mental Health" in info[-1]:
-            can_add+=1
-        elif needs_disability_support == False:
-            can_add+=1
+        if sex == "Male" and "Men" in shelter["Supports"]:
+            can_add += 1
+        elif sex == "Male" and "Both Sexes" in shelter["Supports"]:
+            can_add += 1
+        elif sex == "Female" and "Women" in shelter["Supports"]:
+            can_add += 1
+        elif sex == "Female" and "Both Sexes" in shelter["Supports"]:
+            can_add += 1
+        elif sex == "Female" and "Families" in shelter["Supports"]:
+            can_add += 1
+        if has_children and "Yes" in shelter["Family Support"]:
+            can_add += 1
+        elif has_children == False:
+            can_add += 1
+        if has_disability and "Yes" in shelter["Support for Disabilities/Illnesses"]:
+            can_add += 1
+        elif has_disability and "Mental Health" in shelter["Support for Disabilities/Illnesses"]:
+            can_add += 1
+        elif has_disability == False:
+            can_add += 1
         if can_add == 3:
             possible_shelters.append(shelter)
     return possible_shelters

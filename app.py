@@ -16,7 +16,7 @@ def create_app():
     app.register_blueprint(search, url_prefix='/search')
     app.register_blueprint(admin, url_prefix='/admin')
 
-    from models import User, Shelter, Ticket
+    from models import User, Ticket
 
     with app.app_context():
         db.create_all()
