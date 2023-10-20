@@ -1,157 +1,154 @@
-{% extends 'base.html' %}
-{% block title %}Contact Us{% endblock %}
-{% block content %}
-{% if loggedIn == False and failedLogin == False%}
+{% extends 'base.html' %} {% block title %}Contact Us{% endblock %} {% block
+content %} {% if loggedIn == False and failedLogin == False%}
 <style>
-    /* Add custom styles here */
-    body {
-        padding-top: 120px;
-        /* Adjusted to account for the fixed navbar */
-    }
+  /* Add custom styles here */
+  body {
+    padding-top: 120px;
+    /* Adjusted to account for the fixed navbar */
+  }
 
-    main {
-        padding: 20px;
-    }
+  main {
+    padding: 20px;
+  }
 
-    .search-section {
-        background-color: #000000;
-        padding: 20px;
-        border-radius: 10px;
-        margin-bottom: 20px;
-    }
+  .search-section {
+    background-color: #000000;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
 
-    .search-options h2 {
-        font-size: 24px;
-        margin-bottom: 10px;
-    }
+  .search-options h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
 
-    .search-options h3 {
-        font-size: 18px;
-        margin-top: 20px;
-        margin-bottom: 10px;
-    }
+  .search-options h3 {
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
 
-    .search-options input[type="radio"] {
-        margin-right: 10px;
-    }
+  .search-options input[type="radio"] {
+    margin-right: 10px;
+  }
 
-    footer {
-        text-align: center;
-        margin-top: 50px;
-    }
+  footer {
+    text-align: center;
+    margin-top: 50px;
+  }
 
-    .list_items {
-        list-style-type: none;
-    }
+  .list_items {
+    list-style-type: none;
+  }
 
-    .textbox-format {
-        color: #000000;
-        border-radius: 5px;
-        border: none;
-    }
+  .textbox-format {
+    color: #000000;
+    border-radius: 5px;
+    border: none;
+  }
 
-    .submit_button {
-        color: white;
-        background-color: #008080;
-        border-radius: 25px;
-        border: none;
-    }
+  .submit_button {
+    color: white;
+    background-color: #008080;
+    border-radius: 25px;
+    border: none;
+  }
 
-    textarea {
-        width: 1060px;
-        height: 300px;
-    }
+  textarea {
+    width: 1060px;
+    height: 300px;
+  }
 </style>
 
 <div class="container">
-    <header2>
-        <h1>Log In</h1>
-    </header2>
+  <header2>
+    <h1>Log In</h1>
+  </header2>
 
-    <main>
-        <section class="search-section">
-            <div class="search-options">
-                <form id="shelterForm" action="" method="POST">
-                    <h3>{{ form.username.label }}</h3>
-                    <p>{{ form.username(size=30) }}</p>
-                    <h3>{{ form.password.label }}</h3>
-                    <p>{{ form.password(size=30) }}</p>
-                    <br>
-                    <p class="submit_button btn btn-primary">{{ form.submit() }}</p>
-                </form>
-            </div>
-        </section>
-    </main>
+  <main>
+    <section class="search-section">
+      <div class="search-options">
+        <form id="shelterForm" action="" method="POST">
+          <h3>{{ form.username.label }}</h3>
+          <p>{{ form.username(size=30) }}</p>
+          <h3>{{ form.password.label }}</h3>
+          <p>{{ form.password(size=30) }}</p>
+          <br />
+          <p class="submit_button btn btn-primary">{{ form.submit() }}</p>
+        </form>
+      </div>
+    </section>
+  </main>
 </div>
 {% elif loggedIn == True and failedLogin == false %}
 <style>
-    body {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
-    }
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
 
-    #siteNav {
-        width: 100%;
-        z-index: 1000;
-    }
+  #siteNav {
+    width: 100%;
+    z-index: 1000;
+  }
 
-    main {
-        margin-top: 70px;
-    }
+  main {
+    margin-top: 70px;
+  }
 
-    .text-container {
-        max-height: auto;
-        overflow-y: auto;
-        text-align: center;
-        width: 1250px;
-        word-wrap: break-word;
-    }
+  .text-container {
+    max-height: auto;
+    overflow-y: auto;
+    text-align: center;
+    width: 1250px;
+    word-wrap: break-word;
+  }
 
-    .table-container {
-        margin-left: 10%;
-        margin-right: 10%;
-    }
+  .table-container {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
 </style>
 
 <main>
-    <div class="table-container">
-        <h1>Tickets:</h1>
-        {% for ticket in tickets %}
-        <h2>ID: {{ ticket.id }}</h2>
-        <br>
-        <h4>Email: {{ ticket.email }}</h4>
-        <br>
-        <p>Ticket: {{ ticket.info }}</p>
-        <br>
-        <br>
-        {% endfor %}
-    </div>
+  <div class="table-container">
+    <h1>Tickets:</h1>
+    {% for ticket in tickets %}
+    <h2>ID: {{ ticket.id }}</h2>
+    <br />
+    <h4>Email: {{ ticket.email }}</h4>
+    <br />
+    <p>Ticket: {{ ticket.info }}</p>
+    <br />
+    <br />
+    {% endfor %}
+  </div>
 </main>
 {% elif failedLogin == True %}
 <style>
-    .text-container {
-        text-align: center;
-    }
+  .text-container {
+    text-align: center;
+  }
 </style>
 <main>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <div class="text-container">
-        <h1>
-            <a href="/admin">
-                Username or Password Incorrect. Please click here to try again.
-            </a>
-        </h1>
-    </div>
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <div class="text-container">
+    <h1>
+      <a href="/admin">
+        Username or Password Incorrect. Please click here to try again.
+      </a>
+    </h1>
+  </div>
 </main>
-{% endif %}
-{% endblock %}
+{% endif %} {% endblock %}

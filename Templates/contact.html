@@ -1,88 +1,87 @@
-{% extends 'base.html' %}
-{% block title %}Contact Us{% endblock %}
-{% block content %}
+{% extends 'base.html' %} {% block title %}Contact Us{% endblock %} {% block
+content %}
 
 <style>
-    /* Add custom styles here */
-    body {
-        padding-top: 120px;
-        /* Adjusted to account for the fixed navbar */
-    }
+  /* Add custom styles here */
+  body {
+    padding-top: 120px;
+    /* Adjusted to account for the fixed navbar */
+  }
 
-    main {
-        padding: 20px;
-    }
+  main {
+    padding: 20px;
+  }
 
-    .search-section {
-        background-color: #000000;
-        padding: 20px;
-        border-radius: 10px;
-        margin-bottom: 20px;
-    }
+  .search-section {
+    background-color: #000000;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
 
-    .search-options h2 {
-        font-size: 24px;
-        margin-bottom: 10px;
-    }
+  .search-options h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
 
-    .search-options h3 {
-        font-size: 18px;
-        margin-top: 20px;
-        margin-bottom: 10px;
-    }
+  .search-options h3 {
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
 
-    .search-options input[type="radio"] {
-        margin-right: 10px;
-    }
+  .search-options input[type="radio"] {
+    margin-right: 10px;
+  }
 
-    footer {
-        text-align: center;
-        margin-top: 50px;
-    }
+  footer {
+    text-align: center;
+    margin-top: 50px;
+  }
 
-    .list_items {
-        list-style-type: none;
-    }
+  .list_items {
+    list-style-type: none;
+  }
 
-    .textbox-format {
-        color: #000000;
-        border-radius: 5px;
-        border: none;
-    }
+  .textbox-format {
+    color: #000000;
+    border-radius: 5px;
+    border: none;
+  }
 
-    .submit_button {
-        color: white;
-        background-color: #008080;
-        border-radius: 25px;
-        border: none;
-    }
+  .submit_button {
+    color: white;
+    background-color: #008080;
+    border-radius: 25px;
+    border: none;
+  }
 
-    textarea {
-        width: 1060px;
-        height: 300px;
-    }
+  textarea {
+    width: 1060px;
+    height: 300px;
+  }
 </style>
 
 <div class="container">
-    <header2>
-        <h1>Contact Form</h1>
-    </header2>
+  <header2>
+    <h1>Contact Form</h1>
+  </header2>
 
-    <main>
-        <section class="search-section">
-            <h2>Please Enter Your Information</h2>
-            <div class="search-options">
-                <form id="shelterForm" action="" method="POST">
-                    <h3>{{ form.email.label }}</h3>
-                    <p>{{ form.email(size=30) }}</p>
-                    <h3>{{ form.info.label }}</h3>
-                    <p>{{ form.info(size=30) }}</p>
-                    <br>
-                    <p class="submit_button btn btn-primary">{{ form.submit() }}</p>
-                </form>
-            </div>
-        </section>
-    </main>
+  <main>
+    <section class="search-section">
+      <h2>Please Enter Your Information</h2>
+      <div class="search-options">
+        <form id="shelterForm" action="" method="POST">
+          <h3>{{ form.email.label }}</h3>
+          <p>{{ form.email(size=30) }}</p>
+          <h3>{{ form.info.label }}</h3>
+          <p>{{ form.info(size=30) }}</p>
+          <br />
+          <p class="submit_button btn btn-primary">{{ form.submit() }}</p>
+        </form>
+      </div>
+    </section>
+  </main>
 </div>
 
 {% endblock %}
