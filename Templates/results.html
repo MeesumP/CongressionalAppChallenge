@@ -27,8 +27,8 @@ content %}
   }
 
   .table-container {
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
   }
 </style>
 
@@ -44,6 +44,8 @@ content %}
           <th scope="col">Has programs for families?</th>
           <th scope="col">Has programs for:</th>
           <th scope="col">Supports those with disabilities?</th>
+          <th>Phone Number:</th>
+          <th>Hours:</th>
         </tr>
       </thead>
       <tbody>
@@ -52,7 +54,7 @@ content %}
           <td>{{ shelter["Name"] }}</td>
           <td>{{ shelter["Agency"] }}</td>
           {% if shelter["Location"] == "" %}
-          <td >None Found</td>
+          <td>None Found</td>
           {% else %}
           <td>{{ shelter["Location"] }}</td>
           {% endif %}
@@ -60,6 +62,10 @@ content %}
           <td>{{ shelter["Family Support"] }}</td>
           <td>{{ shelter["Supports"] }}</td>
           <td>{{ shelter["Support for Disabilities/Illnesses"] }}</td>
+          <td>
+            <a href='tel:{{ shelter["Phone"] }}'>{{ shelter["Phone"] }}</a>
+          </td>
+          <td>{{ shelter["Hours"] }}</td>
         </tr>
 
         {% endfor %}
