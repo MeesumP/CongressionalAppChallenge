@@ -6,7 +6,9 @@ shelters_data = [
         "Description": "Provides emergency shelter and supportive services to homeless men. It is specially designed to move each individual through 3 phases focusing on addressing basic needs, life skills, employment, and housing.",
         "Family Support": "No",
         "Supports": "Men",
-        "Support for Disabilities/Illnesses": "No"
+        "Support for Disabilities/Illnesses": "No",
+        "Phone": "(856) 966-0909",
+        "Hours": "24/7"
     },
     {
         "Name": "Anna M Sample Complex",
@@ -15,16 +17,9 @@ shelters_data = [
         "Description": "Operates a 24/7 supervised residence for homeless families and single adult females. Services available to residents include case management, crisis intervention, counseling, child-enrichment activities, and more.",
         "Family Support": "Yes",
         "Supports": "Women, Families",
-        "Support for Disabilities/Illnesses": " Yes (Mental Health)"
-    },
-    {
-        "Name": "Cooling Centers",
-        "Agency": "NJ 211 Partnership",
-        "Location": "",
-        "Description": "Provides shelter, food, and clothing during extreme temperatures for homeless or medically fragile individuals. Initiates Code Blue Alert during severe weather.",
-        "Family Support": "No",
-        "Supports": "Both Sexes",
-        "Support for Disabilities/Illnesses": "No"
+        "Support for Disabilities/Illnesses": " Yes (Mental Health)",
+        "Phone": "(856) 963-0430",
+        "Hours": "24/7"
     },
     {
         "Name": "Cornerstone Shelter",
@@ -33,7 +28,9 @@ shelters_data = [
         "Description": "Operates an emergency shelter with a 23 bed capacity. Provides additional supportive services to facilitate independence and self-sufficiency.",
         "Family Support": "Yes",
         "Supports": "Men, Women",
-        "Support for Disabilities/Illnesses": "No"
+        "Support for Disabilities/Illnesses": "No",
+        "Phone": "(973) 744-8666",
+        "Hours": "6:00pm - 8:00am"
     },
     {
         "Name": "Cumberland County Family Shelter",
@@ -42,7 +39,9 @@ shelters_data = [
         "Description": "Provides emergency shelter and supportive services for homeless individuals and families with children in Cumberland County.",
         "Family Support": "Yes",
         "Supports": "Both Sexes",
-        "Support for Disabilities/Illnesses": "No"
+        "Support for Disabilities/Illnesses": "No",
+        "Phone": "(856) 825-3144",
+        "Hours": "24/7"
     },
     {
         "Name": "Eleanor Corbett House",
@@ -51,7 +50,9 @@ shelters_data = [
         "Description": "Provides emergency shelter for single women, mothers with children, and two-parent families. Residents are offered the opportunity to save money to secure permanent housing while in the program.",
         "Family Support": "Yes",
         "Supports": "Women, Families",
-        "Support for Disabilities/Illnesses": "No"
+        "Support for Disabilities/Illnesses": "No",
+        "Phone": "(856) 881-5550",
+        "Hours": "24/7"
     },
     {
         "Name": "Circle of Life",
@@ -60,7 +61,10 @@ shelters_data = [
         "Description": "Provides emergency housing for homeless individuals in Essex County.",
         "Family Support": "No",
         "Supports": "Both Sexes",
-        "Support for Disabilities/Illnesses": "No"
+        "Support for Disabilities/Illnesses": "No",
+        "Phone": "(862) 763-4859",
+        "Hours": "24/7"
+
     },
     {
         "Name": "SPCDC Emergency Men's Shelter",
@@ -69,7 +73,9 @@ shelters_data = [
         "Description": "Provides emergency housing, clothing, and food to homeless men. Offers referrals for housing, employment, mental health, and rehabilitation services.",
         "Family Support": "No",
         "Supports": "Men",
-        "Support for Disabilities/Illnesses": "Yes (Referrals)"
+        "Support for Disabilities/Illnesses": "Yes (Referrals)",
+        "Phone": "(973) 278-7900",
+        "Hours": "24/7"
     },
     {
         "Name": "Joseph's House",
@@ -78,7 +84,9 @@ shelters_data = [
         "Description": "Runs a nightly emergency shelter for homeless individuals in Camden County. Provides overnight shelter, meals, access to shower and laundry facilities, and case management services.",
         "Family Support": "No",
         "Supports": "Both Sexes",
-        "Support for Disabilities/Illnesses": "Yes (Case Management)"
+        "Support for Disabilities/Illnesses": "Yes (Case Management)",
+        "Phone": "(856) 246-1087",
+        "Hours": "12AM-1PM, 8PM-12AM (except Mondays)"
     },
     {
         "Name": "Jersey Shore Rescue Mission",
@@ -87,7 +95,9 @@ shelters_data = [
         "Description": "Provides emergency shelter for up to 37 single men. Offers a safe, clean, drug-free environment with shower, laundry, and meal facilities.",
         "Family Support": "No",
         "Supports": "Men",
-        "Support for Disabilities/Illnesses": "Yes (Referrals)"
+        "Support for Disabilities/Illnesses": "Yes (Referrals)",
+        "Phone": "(732) 988-0242",
+        "Hours": "24/7"
     },
     {
         "Name": "Helping the Homeless",
@@ -96,7 +106,9 @@ shelters_data = [
         "Description": "Provides emergency shelter for homeless men in Essex County.",
         "Family Support": "No",
         "Supports": "Men",
-        "Support for Disabilities/Illnesses": "No"
+        "Support for Disabilities/Illnesses": "No",
+        "Phone": "(973) 732-9200",
+        "Hours": "24/7"
     },
     {
         "Name": "Cornerstone Developing Agency",
@@ -105,7 +117,9 @@ shelters_data = [
         "Description": "Operates an emergency homeless shelter for single men and women, helping residents work towards achieving self-sufficiency and independent living.",
         "Family Support": "No",
         "Supports": "Men, Women",
-        "Support for Disabilities/Illnesses": "No"
+        "Support for Disabilities/Illnesses": "No",
+        "Phone": "(609) 770-4277",
+        "Hours": "None Listed"
     },
     {
         "Name": "The HOPE Center",
@@ -114,7 +128,9 @@ shelters_data = [
         "Description": "Provides one night of emergency shelter when funding allows.",
         "Family Support": "No",
         "Supports": "Both Sexes",
-        "Support for Disabilities/Illnesses": "No"
+        "Support for Disabilities/Illnesses": "No",
+        "Phone": "(732) 341-4447",
+        "Hours": "9:00am - 3:00pm (closed Saturday, Sunday, Tuesday, Friday)"
     },
     {
         "Name": "Elizabeth Branch YMCA",
@@ -123,7 +139,9 @@ shelters_data = [
         "Description": "Provides a shelter for single men and women, age 18 and over, and families with children. Offers emergency food, housing search assistance, and referrals to medical and counseling services.",
         "Family Support": "Yes",
         "Supports": "Men, Women, Families",
-        "Support for Disabilities/Illnesses": "No"
+        "Support for Disabilities/Illnesses": "No",
+        "Phone": "(908) 355-9622",
+        "Hours": "7:00am - 9:00pm (Monday-Friday), 8:00am - 3:00pm (Saturday), 9:00am - 1:00pm (Sunday)"
     },
     {
         "Name": "Family Promise of Bergen County",
@@ -132,16 +150,20 @@ shelters_data = [
         "Description": "Offers temporary shelter through hotel placement to working families with dependent children who are homeless or at risk of losing their housing.",
         "Family Support": "Yes",
         "Supports": "Families",
-        "Support for Disabilities/Illnesses": "No"
+        "Support for Disabilities/Illnesses": "No",
+        "Phone": "(201) 833-8009",
+        "Hours": "9:00am - 5:00pm"
     },
     {
         "Name": "Apostles' House (Newark, 28-30 Grant St Location)",
         "Agency": "Apostles' House",
-        "Location": "28-30 Grant St, Newark, NJ 07104",
+        "Location": "24 Grant St, Newark, NJ 07104",
         "Description": "Provides a 30 bed emergency shelter facility for women with children. Offers supportive services and a Continuum of Care program for families transitioning to permanent housing.",
         "Family Support": "Yes",
         "Supports": "Women, Families",
-        "Support for Disabilities/Illnesses": "Yes (Counseling)"
+        "Support for Disabilities/Illnesses": "Yes (Counseling)",
+        "Phone": "(973) 482-0625",
+        "Hours": "9:00am - 5:00pm"
     },
     {
         "Name": "Atlantic City Rescue Mission",
@@ -150,7 +172,9 @@ shelters_data = [
         "Description": "Provides nightly emergency shelter to single individuals.",
         "Family Support": "No",
         "Supports": "Men",
-        "Support for Disabilities/Illnesses": "No"
+        "Support for Disabilities/Illnesses": "No",
+        "Phone": "(609) 345-5517",
+        "Hours": "24/7"
     },
     {
         "Name": "Elizabeth Coalition to House the Homeless",
@@ -159,7 +183,9 @@ shelters_data = [
         "Description": "Offers temporary or short term emergency shelter to people in need.",
         "Family Support": "No",
         "Supports": "Both Sexes",
-        "Support for Disabilities/Illnesses": "No"
+        "Support for Disabilities/Illnesses": "No",
+        "Phone": "(908) 355-2060",
+        "Hours": "9:00am - 4:00pm"
     },
     {
         "Name": "Family Promise of Essex County",
@@ -168,7 +194,9 @@ shelters_data = [
         "Description": "Helps displaced families (one or both parents or caregivers with children) get temporary food and shelter while they seek and keep employment.",
         "Family Support": "Yes",
         "Supports": "Families",
-        "Support for Disabilities/Illnesses": "No"
+        "Support for Disabilities/Illnesses": "No",
+        "Phone": "973) 746-1400",
+        "Hours": "9:00am - 5:00pm (Mon-Friday)"
     },
     {
         "Name": "Isaiah House",
@@ -177,7 +205,9 @@ shelters_data = [
         "Description": "Operates an emergency shelter for single women, women with children, and married families with children.",
         "Family Support": "Yes",
         "Supports": "Women, Families",
-        "Support for Disabilities/Illnesses": "No"
+        "Support for Disabilities/Illnesses": "No",
+        "Phone": "(973) 678-5882",
+        "Hours": "24/7"
     },
     {
         "Name": "Market Street Mission",
@@ -186,7 +216,9 @@ shelters_data = [
         "Description": "Operates a shelter that offers immediate placement for eligible men. Capacity for 10 single men available each night during the week.",
         "Family Support": "No",
         "Supports": "Men",
-        "Support for Disabilities/Illnesses": "No"
+        "Support for Disabilities/Illnesses": "No",
+        "Phone": "(973) 538-0431",
+        "Hours": "24/7"
     },
     {
         "Name": "Affordable Homes Group",
@@ -195,7 +227,9 @@ shelters_data = [
         "Description": "Short term emergency shelter with intensive case management services to homeless individuals and families by means of agency and self-referral.",
         "Family Support": "Yes",
         "Supports": "Both Sexes",
-        "Support for Disabilities/Illnesses": "Yes (Case Management)"
+        "Support for Disabilities/Illnesses": "Yes (Case Management)",
+        "Phone": "(609) 261-4571",
+        "Hours": "None Listed"
     },
     {
         "Name": "Extended Hand Ministries",
@@ -204,25 +238,31 @@ shelters_data = [
         "Description": "Provides emergency shelter to house individuals temporarily and allows clients to seek employment, housing, and social services to better their lives.",
         "Family Support": "No",
         "Supports": "Both Sexes",
-        "Support for Disabilities/Illnesses": "No"
+        "Support for Disabilities/Illnesses": "No",
+        "Phone": "(609) 914-4270",
+        "Hours": "24/6 (not sundays)"
     },
     {
         "Name": "Newly Destined Shelter",
         "Agency": "Newly Destined Broad Human Services Counseling Center",
-        "Location": "1114-1116 Broad St, Newark, NJ 07102",
+        "Location": "1114 Broad St, Newark, NJ 07102",
         "Description": "Provides emergency shelter for homeless men 18 years of age and older who reside in Essex County.",
         "Family Support": "No",
         "Supports": "Men",
-        "Support for Disabilities/Illnesses": "No"
+        "Support for Disabilities/Illnesses": "No",
+        "Phone": "(973) 242-8088",
+        "Hours": "9:00am - 5:00pm (Mon-Fri)"
     },
     {
-        "Name": "Wayne NJ",
+        "Name": "Fairlawn NJ",
         "Agency": "Women and Families Ascending Association (WAFAA)",
-        "Location": "Wayne, NJ 07474",
+        "Location": "21-07 Maple Ave, Fair Lawn, NJ 07410",
         "Description": "Provides homeless shelter services to Northern Jersey residents in need of emergency housing.",
         "Family Support": "Yes",
         "Supports": "Women, Families",
-        "Support for Disabilities/Illnesses": "No"
+        "Support for Disabilities/Illnesses": "No",
+        "Phone": "(800) 930-9232",
+        "Hours": "9:00am - 5:00pm (Except Sat and Sun)"
     },
     {
         "Name": "South 16th Street Shelter",
@@ -231,7 +271,9 @@ shelters_data = [
         "Description": "Operates an emergency shelter for single homeless men.",
         "Family Support": "No",
         "Supports": "Men",
-        "Support for Disabilities/Illnesses": "No"
+        "Support for Disabilities/Illnesses": "No",
+        "Phone": "(973) 483-2882",
+        "Hours": "Not listed"
     },
     {
         "Name": "UCC Fulton Street Shelter",
@@ -240,7 +282,9 @@ shelters_data = [
         "Description": "Offers short-term (at least 30 days) shelter for homeless, single men and women in Newark. Provides a bed, clean linens, toiletries, and shower facilities.",
         "Family Support": "No",
         "Supports": "Men, Women",
-        "Support for Disabilities/Illnesses": "No"
+        "Support for Disabilities/Illnesses": "No",
+        "Phone": "(973) 642-0181",
+        "Hours": "24/7"
     },
     {
         "Name": "Communities of Faith for Housing",
@@ -249,16 +293,20 @@ shelters_data = [
         "Description": "Provides a shelter that houses adult men and women. Shelter services include life skills training and job skills.",
         "Family Support": "No",
         "Supports": "Men, Women",
-        "Support for Disabilities/Illnesses": "No"
+        "Support for Disabilities/Illnesses": "No",
+        "Phone": "(201) 656-5069",
+        "Hours": "9:00am - 9:00pm"
     },
     {
         "Name": "Interfaith Homeless Outreach Council (IHOC)",
         "Agency": "Interfaith Homeless Outreach Council (IHOC)",
-        "Location": "555B Atlantic Ave, Camden, NJ 08104",
+        "Location": "820 N 5th St, Camden, NJ 08102",
         "Description": "Provides shelter, food, and counseling to homeless men from November to May while they seek employment or financial aid.",
         "Family Support": "No",
         "Supports": "Men",
-        "Support for Disabilities/Illnesses": "No"
+        "Support for Disabilities/Illnesses": "No",
+        "Phone": "(609) 238-885",
+        "Hours": "Not listed"
     },
     {
         "Name": "Interfaith Family Services",
@@ -267,7 +315,9 @@ shelters_data = [
         "Description": "Provides temporary shelter, meals, and support services to families with children who are experiencing homelessness.",
         "Family Support": "Yes",
         "Supports": "Families",
-        "Support for Disabilities/Illnesses": "No"
+        "Support for Disabilities/Illnesses": "No",
+        "Phone": "(732) 736-1550",
+        "Hours": "9:00am - 4:00pm (closed Sat and Sun)"
     },
     {
         "Name": "Good Shepherd Mission",
@@ -276,7 +326,9 @@ shelters_data = [
         "Description": "Homeless shelter for men. Agency also offers a drug and alcohol rehabilitation center to which homeless shelter clients may have priority access.",
         "Family Support": "No",
         "Supports": "Men",
-        "Support for Disabilities/Illnesses": "Yes (Referral Priority)"
+        "Support for Disabilities/Illnesses": "Yes (Referral Priority)",
+        "Phone": "(973) 742-9244",
+        "Hours": "6:00am - 7:00pm"
     },
     {
         "Name": "Newark Transitional Corp (Men Shelter)",
@@ -285,7 +337,9 @@ shelters_data = [
         "Description": "Provides emergency shelter to homeless individuals.",
         "Family Support": "No",
         "Supports": "Men",
-        "Support for Disabilities/Illnesses": "No"
+        "Support for Disabilities/Illnesses": "No",
+        "Phone": "(973) 297-1473",
+        "Hours": "Not Listed"
     },
     {
         "Name": "Newark Transitional Corp (Women Shelter)",
@@ -294,7 +348,9 @@ shelters_data = [
         "Description": "Provides emergency shelter to homeless individuals.",
         "Family Support": "No",
         "Supports": "Women",
-        "Support for Disabilities/Illnesses": "No"
+        "Support for Disabilities/Illnesses": "No",
+        "Phone": "(973) 242-1119",
+        "Hours": "Not listed, but does stop admissions from 5-6pm."
     },
     {
         "Name": "Catholic Charities of the Archdiocese of Newark - Mt Carmel Guild Housing Services",
@@ -303,7 +359,9 @@ shelters_data = [
         "Description": "Provides an emergency shelter for women with children or single, pregnant women in their last trimester. Helps families become self-sufficient by giving them an opportunity for decision making and for assuming responsibility for improving their situation under the supervision, support, and guidance of shelter staff.",
         "Family Support": "Yes",
         "Supports": "Women, Pregnant Women, Families",
-        "Support for Disabilities/Illnesses": "No"
+        "Support for Disabilities/Illnesses": "No",
+        "Phone": "(201) 222-8310",
+        "Hours": "Not Listed"
     },
     {
         "Name": "Market Street Mission",
@@ -312,7 +370,9 @@ shelters_data = [
         "Description": "Provides overnight housing for men who are experiencing homelessness. Offers a hot meal, shower, recovery, and/or spiritually based services.",
         "Family Support": "No",
         "Supports": "Men",
-        "Support for Disabilities/Illnesses": "No"
+        "Support for Disabilities/Illnesses": "No",
+        "Phone": "(973) 538-5854",
+        "Hours": "Not listed, but Morristown version is 24/7"
     },
     {
         "Name": "Rescue Mission of Trenton",
@@ -321,7 +381,9 @@ shelters_data = [
         "Description": "Operates an emergency homeless shelter for single, adult Mercer County residents. Provides dinner, breakfast, access to shower and laundry facilities. Also offers case management services and transitional housing.",
         "Family Support": "No",
         "Supports": "Men",
-        "Support for Disabilities/Illnesses": "Yes (Case Management)"
+        "Support for Disabilities/Illnesses": "Yes (Case Management)",
+        "Phone": "609-695-6479 ",
+        "Hours": "4:00pm - 8:00am"
     },
     {
         "Name": "Palisades Emergency Residence Corp (PERC)",
@@ -330,7 +392,9 @@ shelters_data = [
         "Description": "Provides emergency housing for homeless individuals.",
         "Family Support": "No",
         "Supports": "Both Sexes",
-        "Support for Disabilities/Illnesses": "No"
+        "Support for Disabilities/Illnesses": "No",
+        "Phone": "(201) 348-8150",
+        "Hours": "24/7"
     },
     {
         "Name": "Turning Point Community Services",
@@ -339,7 +403,9 @@ shelters_data = [
         "Description": "Provides an emergency supportive residence for homeless single women with children. The program has the capacity to house approximately 24 families referred by a county welfare department.",
         "Family Support": "Yes",
         "Supports": "Women, Families",
-        "Support for Disabilities/Illnesses": "No"
+        "Support for Disabilities/Illnesses": "No",
+        "Phone": "(973) 374-7838",
+        "Hours": "24/7"
     },
     {
         "Name": "Affordable Housing Alliance of NJ (AHA)",
@@ -348,7 +414,9 @@ shelters_data = [
         "Description": "Serves homeless men and woman throughout Monmouth County by providing them with safe lodging, nutritious meals, and supportive services.",
         "Family Support": "No",
         "Supports": "Both Sexes",
-        "Support for Disabilities/Illnesses": "Yes (Case Management)"
+        "Support for Disabilities/Illnesses": "Yes (Case Management)",
+        "Phone": "(732) 389-2958",
+        "Hours": "8:00am - 5:00pm (office hours)"
     },
     {
         "Name": "Volunteers of America Delaware Valley (VOADV) - Agapé House",
@@ -357,7 +425,9 @@ shelters_data = [
         "Description": "Agapé House is a 60-bed shelter providing emergency services for homeless families and single individuals, helping them work towards achieving self-sufficiency and independent living.",
         "Family Support": "Yes",
         "Supports": "Both Sexes",
-        "Support for Disabilities/Illnesses": "No"
+        "Support for Disabilities/Illnesses": "No",
+        "Phone": "(908) 707-9753",
+        "Hours": "24/7"
     },
     {
         "Name": "St. Bridget’s Shelter",
@@ -366,7 +436,9 @@ shelters_data = [
         "Description": "Provides transitional housing (20 beds) and emergency shelter (10 beds) residence that provides housing and supportive services to homeless men living with HIV/AIDS. Based on individual needs, clients can access: - Educational workshops on nutrition, health, stress reduction and other life skills areas - Referral to mental health and/or substance abuse counseling - Case management services - Advocacy services - Recreational activities",
         "Family Support": "Yes",
         "Supports": "Women, Pregnant Women, Families",
-        "Support for Disabilities/Illnesses": "No"
+        "Support for Disabilities/Illnesses": "No",
+        "Phone": "(201) 222-8310",
+        "Hours": "24/7"
     }
 ]
 
