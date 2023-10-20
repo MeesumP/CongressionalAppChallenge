@@ -51,7 +51,11 @@ content %}
         <tr>
           <td>{{ shelter["Name"] }}</td>
           <td>{{ shelter["Agency"] }}</td>
+          {% if shelter["Location"] == "" %}
+          <td >None Found</td>
+          {% else %}
           <td>{{ shelter["Location"] }}</td>
+          {% endif %}
           <td>{{ shelter["Description"] }}</td>
           <td>{{ shelter["Family Support"] }}</td>
           <td>{{ shelter["Supports"] }}</td>
