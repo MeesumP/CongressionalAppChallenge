@@ -30,8 +30,8 @@ header {
     width: 100%;
     min-height: auto;
     text-align: center;
-    color: #fff;
-    background-image: url('https://newjerseymonitor.com/wp-content/uploads/2023/04/homeless-encampment-2048x1365.jpg');
+    color: white;
+    /*background-image: url('https://www.shutterstock.com/image-photo/hands-holding-paper-house-family-260nw-1908797449.jpg');*/
     background-position: center;
     -webkit-background-size: cover;
     -moz-background-size: cover;

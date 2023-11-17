@@ -1,12 +1,17 @@
 {% extends "base.html" %} {% block title %}Shelter Search{% endblock %} {% block
   content %}
-  
+  <style>
+    header {
+      background-image: url('https://bluecoasttitle.com/wp-content/uploads/2018/06/close-up-of-hands-holding-house-or-home-model-P9K53MZ.jpg');
+    }
+  </style>
   <!-- Header -->
   <header>
     <div class="header-content">
       <div class="header-content-inner">
-        <h1>Find a Shelter</h1>
-        <p>Our service helps people find shelters in Bergen County</p>
+        <h1 style="padding:.25em 0; background: #222; color: #ffffff; display: inline-flex; text-align: center;">Find a Shelter</h1>
+        <p style="padding:.25em 0; background: #222; color: #ffffff; display: inline-flex; text-align: center;">Our service helps people find shelters in Bergen County</p>
+        <br>
         <a href="/search" class="btn btn-primary btn-lg">Find Now</a>
       </div>
     </div>
